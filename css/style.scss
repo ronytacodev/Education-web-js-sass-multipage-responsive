@@ -20,4 +20,72 @@ $white: #fff;
 $border: 1rem solid $green;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
-// me quede en el min 9:52
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black ;
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $light-color ;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $green;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    box-shadow: $box-shadow;
+    padding: 2rem 10%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    margin-right: auto;
+    @include titleText(2.5rem);
+    font-weight: bolder;
+
+    i {
+        color: $green;
+    }
+}
+
+.navbar a {
+    margin-right: 2rem;
+    @include titleText(2rem);
+
+    &:hover {
+        color: $green;
+    }
+}
+
+// me quede en el min 13.36
