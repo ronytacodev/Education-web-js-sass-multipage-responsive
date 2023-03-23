@@ -1,7 +1,9 @@
 let navbar = document.querySelector('.header .navbar');
 
 document.querySelector('#menu-btn').onclick = () => {
-    navbar.classList.toggle('active')
+    navbar.classList.toggle('active');
 }
 
-// me quede en el min 18:55
+document.querySelector('#close-navbar').onclick = () => {
+    navbar.classList.remove('active');
+}
