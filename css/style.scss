@@ -17,7 +17,7 @@ $light-color: #777;
 $ligh-white: #eee;
 $black: #444;
 $white: #fff;
-$border: 1rem solid $green;
+$border: 0.1rem solid $green;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
 @mixin grid($val) {
@@ -55,6 +55,22 @@ html {
     }
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    background: $light-green;
+    color: $green;
+    cursor: pointer;
+
+    &:hover {
+        background: $green;
+        color: $white;
+    }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -67,60 +83,137 @@ html {
     align-items: center;
     align-items: center;
     z-index: 1000;
-}
 
-.logo {
-    margin-right: auto;
-    @include titleText(2.5rem);
-    font-weight: bolder;
+    .logo {
+        margin-right: auto;
+        @include titleText(2.5rem);
+        font-weight: bolder;
 
-    i {
-        color: $green;
+        i {
+            color: $green;
+        }
     }
+
+    .navbar {
+        position: relative;
+
+        #close-navbar {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $black;
+            display: none;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+
+        a {
+            margin-right: 2rem;
+            @include titleText(2rem);
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+    }
+
+    .icons div {
+        cursor: pointer;
+        font-size: 2.5rem;
+        color: $black;
+        margin-left: 2rem;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
 }
 
-.navbar {
-    position: relative;
 
-    #close-navbar {
+.account-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35rem;
+    background: $white;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100%;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+    z-index: 1200;
+    padding: 2rem;
+    text-align: center;
+
+    #close-form {
         position: absolute;
         top: 1.5rem;
-        right: 2rem;
+        right: 2.5rem;
         font-size: 4rem;
         cursor: pointer;
         color: $black;
-        display: none;
 
         &:hover {
             transform: rotate(90deg);
         }
     }
 
-    a {
-        margin-right: 2rem;
-        @include titleText(2rem);
+    form {
+        border: $border;
+        padding: 2rem;
 
-        &:hover {
-            color: $green;
+        h3 {
+            @include titleText(2.5rem);
+            padding-bottom: .5rem;
+            text-transform: uppercase;
         }
+
+        .box {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            border: $border;
+            font-size: 1.6rem;
+            margin: .7rem 0;
+        }
+
+        .flex {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label {
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+
+            a {
+                font-size: 1.5rem;
+                color: $light-color;
+                margin-left: auto;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+        }
+
+        // me quede en el min 30.23
     }
 }
-
-.icons div {
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: $black;
-    margin-left: 2rem;
-
-    &:hover {
-        color: $green;
-    }
-}
-
-#menu-btn {
-    display: none;
-}
-
 
 
 
@@ -178,6 +271,7 @@ html {
             display: flex;
             flex-flow: column;
             justify-content: center;
+            z-index: 1200;
 
             #close-navbar {
                 display: block;

@@ -24,6 +24,21 @@ html::-webkit-scrollbar-thumb {
   background: #0eb582;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #0eb582;
+  background: #f0fdfa;
+  color: #0eb582;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #0eb582;
+  color: #fff;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -38,22 +53,20 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   z-index: 1000;
 }
-
-.logo {
+.header .logo {
   margin-right: auto;
   font-size: 2.5rem;
   text-transform: capitalize;
   color: #444;
   font-weight: bolder;
 }
-.logo i {
+.header .logo i {
   color: #0eb582;
 }
-
-.navbar {
+.header .navbar {
   position: relative;
 }
-.navbar #close-navbar {
+.header .navbar #close-navbar {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
@@ -62,31 +75,95 @@ html::-webkit-scrollbar-thumb {
   color: #444;
   display: none;
 }
-.navbar #close-navbar:hover {
+.header .navbar #close-navbar:hover {
   transform: rotate(90deg);
 }
-.navbar a {
+.header .navbar a {
   margin-right: 2rem;
   font-size: 2rem;
   text-transform: capitalize;
   color: #444;
 }
-.navbar a:hover {
+.header .navbar a:hover {
   color: #0eb582;
 }
-
-.icons div {
+.header .icons div {
   cursor: pointer;
   font-size: 2.5rem;
   color: #444;
   margin-left: 2rem;
 }
-.icons div:hover {
+.header .icons div:hover {
   color: #0eb582;
 }
-
-#menu-btn {
+.header #menu-btn {
   display: none;
+}
+
+.account-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  justify-content: center;
+  height: 100%;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+  padding: 2rem;
+  text-align: center;
+}
+.account-form #close-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #444;
+}
+.account-form #close-form:hover {
+  transform: rotate(90deg);
+}
+.account-form form {
+  border: 0.1rem solid #0eb582;
+  padding: 2rem;
+}
+.account-form form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.account-form form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 1.6rem;
+  margin: 0.7rem 0;
+}
+.account-form form .flex {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.account-form form .flex label {
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+}
+.account-form form .flex a {
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: auto;
+}
+.account-form form .flex a:hover {
+  text-decoration: underline;
+  color: #0eb582;
 }
 
 @media (max-width: 1200px) {
@@ -116,6 +193,7 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    z-index: 1200;
   }
   .header .navbar #close-navbar {
     display: block;
