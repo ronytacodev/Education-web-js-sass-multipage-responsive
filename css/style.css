@@ -184,6 +184,10 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.footer {
+  background: #f0fdfa;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 2rem 5%;
