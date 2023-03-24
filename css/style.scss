@@ -64,6 +64,7 @@ html {
     background: $light-green;
     color: $green;
     cursor: pointer;
+    text-transform: capitalize;
 
     &:hover {
         background: $green;
@@ -143,7 +144,7 @@ html {
 .account-form {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -105%;
     width: 35rem;
     background: $white;
     display: flex;
@@ -151,10 +152,14 @@ html {
     gap: 2rem;
     justify-content: center;
     height: 100%;
-    box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
     z-index: 1200;
     padding: 2rem;
     text-align: center;
+
+    &.active {
+        right: 0;
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+    }
 
     #close-form {
         position: absolute;
@@ -172,6 +177,11 @@ html {
     form {
         border: $border;
         padding: 2rem;
+        display: none;
+
+        &.active {
+            display: block;
+        }
 
         h3 {
             @include titleText(2.5rem);
@@ -211,7 +221,18 @@ html {
             }
         }
 
-        // me quede en el min 30.23
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .buttons .btn {
+        margin: 0 .5rem;
+
+        &.active {
+            background: $green;
+            color: $white;
+        }
     }
 }
 
