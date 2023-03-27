@@ -47,3 +47,41 @@ var swiper = new Swiper(".home-slider", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  // swiper slider courses
+//   var swiper = new Swiper(".home-courses-slider", {
+//     loop:true,
+//     grabCursor: true,
+//     breakpoints: {
+//         0: {
+//           slidesPerView: 1,
+//         },
+//         768: {
+//           slidesPerView: 2,
+//         },
+//         991: {
+//           slidesPerView: 3,
+//         },
+//       },
+//   });
+
+  var swiper = new Swiper(".home-courses-slider", {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      loop:true,
+    },
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 4,
+        },
+      },
+  });
