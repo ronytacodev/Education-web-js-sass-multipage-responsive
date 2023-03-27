@@ -41,6 +41,7 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       type: "fraction",
     },
+    loop:true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

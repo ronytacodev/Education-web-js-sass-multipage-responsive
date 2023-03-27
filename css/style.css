@@ -215,6 +215,11 @@ section {
   padding: 1rem 0;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0eb582;
+}
+
 .footer {
   background: #f0fdfa;
 }
@@ -333,9 +338,25 @@ section {
     text-align: center;
     font-size: 3rem;
   }
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .home .slide {
+    height: 80%;
+  }
+  .home .slide .content h3 {
+    font-size: 2rem;
+  }
+  .home .slide .content p {
+    font-size: 1rem;
+    line-height: 2;
+    color: #777;
+    color: #eee;
+    padding: 1rem 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

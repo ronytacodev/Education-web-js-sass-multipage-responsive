@@ -269,6 +269,10 @@ section {
     }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: $green;
+}
 
 
 
@@ -425,11 +429,29 @@ section {
             }
         }
     }
+
+    .home .slide .content h3 {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 450px) {
 
     html {
         font-size: 50%;
+    }
+
+    .home .slide {
+        height: 80%;
+    }
+
+    .home .slide .content h3 {
+        font-size: 2rem;
+    }
+
+    .home .slide .content p {
+        @include graphText(1rem);
+        color: $light-white;
+        padding: 1rem 1rem;
     }
 }
