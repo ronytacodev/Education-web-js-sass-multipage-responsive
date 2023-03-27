@@ -59,6 +59,12 @@ section {
     padding: 5rem 10%;
 }
 
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem);
+}
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -143,7 +149,6 @@ section {
     }
 
 }
-
 
 .account-form {
     position: fixed;
@@ -272,6 +277,50 @@ section {
 .swiper-button-next,
 .swiper-button-prev {
     color: $green;
+}
+
+// styles subjects
+
+.subjects {
+
+    .box-container {
+        @include grid(16rem);
+
+        .box {
+            padding: 3rem 2rem;
+            text-align: center;
+            border: $border;
+            background: $light-green;
+            cursor: pointer;
+
+            &:hover {
+                background: $green;
+
+                h3 {
+                    color: $white;
+                }
+
+                p {
+                    color: $light-white;
+                }
+            }
+
+            img {
+                height: 10rem;
+                margin-bottom: .7rem;
+            }
+
+            h3 {
+                @include titleText(1.7rem);
+                padding: .5rem 0;
+            }
+
+            p {
+                @include graphText(1.5rem);
+            }
+
+        }
+    }
 }
 
 
@@ -442,7 +491,7 @@ section {
     }
 
     .home .slide {
-        height: 80%;
+        height: 90%;
     }
 
     .home .slide .content h3 {
@@ -453,5 +502,14 @@ section {
         @include graphText(1rem);
         color: $light-white;
         padding: 1rem 1rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: scale(0.5);
+    }
+
+    .heading {
+        font-size: 3rem;
     }
 }
