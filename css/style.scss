@@ -63,6 +63,29 @@ section {
     padding: 5rem 10%;
 }
 
+.heading-link {
+    text-align: center;
+    background: url(../images/heading-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h3 {
+        @include titleText(4rem);
+    }
+
+    p {
+        @include graphText(2rem);
+
+        a {
+            color: $green;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 .heading {
     text-align: center;
     margin-bottom: 3rem;
@@ -384,6 +407,36 @@ section {
 
     .swiper-pagination-bullet {
         background: $green;
+    }
+}
+
+// styles about
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .image {
+        flex: 1 1 40rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        flex: 1 1 40rem;
+
+        .about-title {
+            @include titleText(2.5rem);
+        }
+
+        p {
+            @include graphText(1.5rem);
+            // me quede en el min 1:16:32
+        }
     }
 }
 
