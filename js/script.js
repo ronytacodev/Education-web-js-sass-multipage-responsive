@@ -34,3 +34,15 @@ document.querySelector('#account-btn').onclick = () => {
 document.querySelector('#close-form').onclick = () => {
     accountForm.classList.remove('active');
 }
+
+// swiper slider home
+var swiper = new Swiper(".home-slider", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

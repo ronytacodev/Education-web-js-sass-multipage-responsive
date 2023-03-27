@@ -14,7 +14,7 @@
 $green: #0eb582;
 $light-green: #f0fdfa;
 $light-color: #777;
-$ligh-white: #eee;
+$light-white: #eee;
 $black: #444;
 $white: #fff;
 $border: 0.1rem solid $green;
@@ -236,6 +236,35 @@ section {
         &.active {
             background: $green;
             color: $white;
+        }
+    }
+}
+
+// styles home starts
+
+.home {
+    padding: 0;
+
+    .slide {
+        display: flex;
+        align-items: center;
+        height: 60rem;
+        background-size: cover !important;
+        background-position: center !important;
+
+        .content {
+            width: 50rem;
+
+            h3 {
+                @include titleText(5.5rem);
+                color: $white;
+            }
+
+            p {
+                @include graphText(1.6rem);
+                color: $light-white;
+                padding: 1rem 0;
+            }
         }
     }
 }
