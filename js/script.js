@@ -122,4 +122,12 @@ var swiper = new Swiper(".home-slider", {
           },
   });
 
+  // script load more
+  document.querySelector('.load-more .btn').onclick = () => {
+    document.querySelectorAll('.courses .box-container .hide').forEach(show => {
+      show.style.display = 'block'
+    });
+    document.querySelector('.load-more .btn').style.display = 'none';
+  };
+
 

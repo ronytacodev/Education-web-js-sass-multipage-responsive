@@ -566,6 +566,10 @@ section {
   color: #0eb582;
   padding-right: 0.5rem;
 }
+.courses .load-more {
+  margin-top: 2rem;
+  text-align: center;
+}
 
 .footer {
   background: #f0fdfa;
