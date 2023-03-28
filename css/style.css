@@ -365,11 +365,39 @@ section {
   flex: 1 1 40rem;
 }
 .about .content .about-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: capitalize;
   color: #444;
 }
 .about .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
+}
+.about .content .icons-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.about .content .icons-container .icons {
+  text-align: center;
+  border: 0.1rem solid #0eb582;
+  background: #f0fdfa;
+  padding: 3rem 2rem;
+}
+.about .content .icons-container .icons img {
+  height: 5rem;
+  margin-bottom: 0.5rem;
+}
+.about .content .icons-container .icons h3 {
+  padding: 0.5rem 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.about .content .icons-container .icons span {
   font-size: 1.5rem;
   line-height: 2;
   color: #777;
@@ -520,5 +548,8 @@ section {
   }
   .heading {
     font-size: 3rem;
+  }
+  .about .content .about-title {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
