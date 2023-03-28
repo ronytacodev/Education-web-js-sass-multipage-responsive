@@ -130,4 +130,16 @@ var swiper = new Swiper(".home-slider", {
     document.querySelector('.load-more .btn').style.display = 'none';
   };
 
+  // script accordion faq
+  let accordion = document.querySelectorAll('.faq .accordion-container .accordion');
+
+  accordion.forEach(acco => {
+    acco.onclick = () => {
+      // accordion.forEach(dion => dion.classList.remove('active'));
+      acco.classList.toggle('active');
+    }
+  });
+
+
+
 
