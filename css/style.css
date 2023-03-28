@@ -404,7 +404,6 @@ section {
 
 .teachers .slide {
   text-align: center;
-  width: 30rem;
 }
 .teachers .slide:hover .image img {
   background: #0eb582;
@@ -455,6 +454,51 @@ section {
 .teachers .swiper-button-next,
 .teachers .swiper-button-prev {
   color: #444;
+}
+
+.reviews .slide {
+  text-align: center;
+}
+.reviews .slide p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  position: relative;
+  background: #f0fdfa;
+  border: 0.1rem solid #0eb582;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+.reviews .slide p:before {
+  content: "";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background: #f0fdfa;
+  border-bottom: 0.1rem solid #0eb582;
+  border-right: 0.1rem solid #0eb582;
+  height: 2rem;
+  width: 2rem;
+}
+.reviews .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+.reviews .slide h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.reviews .slide .stars {
+  font-size: 1.2rem;
+  color: #0eb582;
+}
+.reviews .swiper-button-prev,
+.reviews .swiper-button-next {
+  margin-top: 7rem;
 }
 
 .footer {
