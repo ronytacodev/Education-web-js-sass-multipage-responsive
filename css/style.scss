@@ -815,6 +815,16 @@ section {
 
 }
 
+// styles logo-slider
+.logo-container {
+    text-align: center;
+
+    img {
+        height: 10rem;
+        pointer-events: none;
+    }
+}
+
 
 
 

@@ -140,6 +140,33 @@ var swiper = new Swiper(".home-slider", {
     }
   });
 
+    // swiper section logo-slider
+    var swiper = new Swiper(".logo-slider", {
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      loop:true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+              0: {
+                slidesPerView: 1,
+              },
+              450: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              991: {
+                slidesPerView: 4,
+              },
+            },
+    });
 
 
 

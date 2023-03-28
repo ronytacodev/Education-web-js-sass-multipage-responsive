@@ -701,6 +701,14 @@ section {
   display: none;
 }
 
+.logo-container {
+  text-align: center;
+}
+.logo-container img {
+  height: 10rem;
+  pointer-events: none;
+}
+
 .footer {
   background: #f0fdfa;
 }
