@@ -49,22 +49,6 @@ var swiper = new Swiper(".home-slider", {
   });
 
   // swiper slider courses
-//   var swiper = new Swiper(".home-courses-slider", {
-//     loop:true,
-//     grabCursor: true,
-//     breakpoints: {
-//         0: {
-//           slidesPerView: 1,
-//         },
-//         768: {
-//           slidesPerView: 2,
-//         },
-//         991: {
-//           slidesPerView: 3,
-//         },
-//       },
-//   });
-
   var swiper = new Swiper(".home-courses-slider", {
     slidesPerView: 1,
     spaceBetween: 40,
@@ -85,3 +69,51 @@ var swiper = new Swiper(".home-slider", {
         },
       },
   });
+
+  // swiper slide section teachers
+  // var swiper = new Swiper(".teachers-slider", {
+  //   slidesPerView: 1,
+  //   spaceBetween: 40,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //     loop:true,
+  //   },
+  //   breakpoints: {
+  //       0: {
+  //         slidesPerView: 1,
+  //       },
+  //       768: {
+  //         slidesPerView: 2,
+  //       },
+  //       991: {
+  //         slidesPerView: 4,
+  //       },
+  //     },
+  // });
+
+  var swiper = new Swiper(".teachers-slider", {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    loop:true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            991: {
+              slidesPerView: 4,
+            },
+          },
+  });
+

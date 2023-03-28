@@ -109,6 +109,7 @@ section {
     }
 }
 
+// styles header
 .header {
     position: sticky;
     top: 0;
@@ -177,6 +178,7 @@ section {
 
 }
 
+// styles account form
 .account-form {
     position: fixed;
     top: 0;
@@ -350,12 +352,12 @@ section {
     }
 }
 
+// styles home courses
 .home-courses {
 
     .slide {
         text-align: center;
         position: relative;
-        width: 30rem;
         background: $light-green;
         overflow: hidden;
 
@@ -440,13 +442,9 @@ section {
 
         .icons-container {
             margin-top: 1rem;
-            // display: flex;
-            // flex-wrap: wrap;
-            // gap: 1.5rem;
             @include grid(16rem);
 
             .icons {
-                // flex: 1 1 12rem;
                 text-align: center;
                 border: $border;
                 background: $light-green;
@@ -467,6 +465,77 @@ section {
                 }
             }
         }
+    }
+}
+
+// styles section teachers
+.teachers {
+
+    .slide {
+        text-align: center;
+        width: 30rem;
+
+        &:hover {
+
+            .image {
+                img {
+                    background: $green;
+                }
+
+                .share {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                background: $light-green;
+                width: 100%;
+            }
+
+            .share {
+                position: absolute;
+                bottom: -10rem;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, .8);
+                padding: 2rem;
+
+                a {
+                    font-size: 3rem;
+                    margin: 0 1rem;
+                    color: $white;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            padding-top: 1rem;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                @include titleText(2rem);
+            }
+
+            span {
+                @include graphText(1.5rem);
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $black;
     }
 }
 

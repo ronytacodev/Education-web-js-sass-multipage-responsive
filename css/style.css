@@ -298,7 +298,6 @@ section {
 .home-courses .slide {
   text-align: center;
   position: relative;
-  width: 30rem;
   background: #f0fdfa;
   overflow: hidden;
 }
@@ -401,6 +400,61 @@ section {
   font-size: 1.5rem;
   line-height: 2;
   color: #777;
+}
+
+.teachers .slide {
+  text-align: center;
+  width: 30rem;
+}
+.teachers .slide:hover .image img {
+  background: #0eb582;
+}
+.teachers .slide:hover .image .share {
+  bottom: 0;
+}
+.teachers .slide .image {
+  position: relative;
+  overflow: hidden;
+}
+.teachers .slide .image img {
+  background: #f0fdfa;
+  width: 100%;
+}
+.teachers .slide .image .share {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+}
+.teachers .slide .image .share a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+.teachers .slide .image .share a:hover {
+  color: #0eb582;
+}
+.teachers .slide .content {
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.teachers .slide .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.teachers .slide .content span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+.teachers .swiper-button-next,
+.teachers .swiper-button-prev {
+  color: #444;
 }
 
 .footer {
